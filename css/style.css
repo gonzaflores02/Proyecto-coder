@@ -14,7 +14,9 @@ fuentes
 font-family: "Bebas Neue", sans-serif;
 
 */
-
+ul{
+    padding-left: 0 !important;
+}
 h1{
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
@@ -106,7 +108,7 @@ footer{
 }
 
 .remeras li img{
-    width: 40rem;
+    width: 100%;
     
 }
 
@@ -115,9 +117,10 @@ footer{
 
 }
 .remeras ul{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    gap: 10rem;
+    gap: 3rem;
 }
 .remeras ul li p{
     font-size: 1.3rem;
@@ -143,6 +146,97 @@ main{
 }
 .main-index{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.imagenes{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    width: 70%;
+}
+
+.off{
+    grid-row: 1 / span 2; 
+    grid-column: 1 / span 2;
+    width: 100%;
+}
+.cuotas{
+    width: 100%;
+    height: 100%;
+}
+.bancos{
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width:350px){
+    .logo{
+        width: 80%;
+    }
+    .logo h1{
+        font-size: 50px;
+    }
+    .navbar{
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    main{
+        padding: 3rem 2rem;
+    }
+    .imagenes{
+        width: 100%;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .off{
+        grid-row: auto; 
+        grid-column: auto;
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        padding: 1rem;
+    }
+    .info{
+        display: none;
+    }
+
+    .remeras ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:768px){
+    .navbar{
+        gap: 3rem;
+    }
+    main{
+        padding: 5rem 4rem;
+    }
+    .imagenes{
+        width: 90%;
+    }
+    footer{
+        padding: 2rem;
+    }
+    .info{
+        display: block;
+    }
+
+}
+@media (min-width:1024px){
+    .off{
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+        width: 100%;
+    }
+    .remeras ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width:1920px){
+    .remeras ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
