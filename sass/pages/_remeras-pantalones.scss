@@ -1,0 +1,48 @@
+.catalogo{
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 3rem;
+        li{
+            background-color: #cacacac7;
+            a{
+                display: block;
+            }
+            img{
+                width: 100%;
+                
+            }
+            p{
+                font-size: 1.3rem;
+                display: inline-block;
+                background-color: $negro;
+                color: $blanco;
+                padding: 0.3rem;
+            }
+        }
+    }
+}
+
+.pantalones1{
+    font-size: 20REM;
+    text-align: center;
+}
+
+@media (min-width:350px){
+    .catalogo ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:1024px){
+    .catalogo ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1920px){
+    .catalogo ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

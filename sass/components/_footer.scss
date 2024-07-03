@@ -1,0 +1,46 @@
+footer{
+    background-color: $gris;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem ;
+    .redes-sociales{
+        ul{
+            display: flex;
+            flex-direction: column;
+            li a img{
+                width: 1.4rem;
+            }
+        }
+    }
+    .info{
+        width: 33%;
+        color: $blanco;
+        text-align: center;
+    }
+    .nav-footer {
+        ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+}
+
+@media (min-width:350px){
+    footer{
+        padding: 1rem;
+    }
+    .info{
+        display: none;
+    }
+}
+
+@media (min-width:768px){
+    footer{
+        padding: 2rem;
+    }
+    .info{
+        display: block;
+    }
+}

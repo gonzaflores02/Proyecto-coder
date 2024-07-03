@@ -1,0 +1,12 @@
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .info-mapa{
+        align-self: flex-start;
+        p{
+            margin-bottom: .5rem;
+        }
+    }
+}

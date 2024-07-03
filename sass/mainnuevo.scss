@@ -1,0 +1,247 @@
+$negro: #1A1A1A;
+$blanco: #ECECEC;
+$gris: #808080;
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+li{
+    list-style: none;
+}
+a{
+    color: $blanco;
+    text-decoration: none;
+}
+ul{
+    padding-left: 0 !important;
+}
+h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    display: inline-block;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+}
+.maps{
+    width: 2rem;
+}
+
+header{
+    .conteiner-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        .logo{
+            background-color: $negro;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+        .carrito{
+            width: 2rem;
+        }
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+        .navbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+            margin-top: 4rem;
+            background-color: $negro;
+            width: 70%;
+            padding: 0.5rem
+            ;
+            .maps{
+                width: 2rem;
+            }
+        }  
+    }
+}
+main{
+    padding: 10rem 0;
+}
+.main-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .imagenes{
+        display: grid;
+        justify-content: center;
+        grid-template-rows: 1fr 1fr;
+        width: 70%;
+        .off{
+            width: 400px;
+            grid-row: 1 / span 2; 
+            grid-column: 1 / span 2;
+            width: 100%;
+        }
+        .cuotas{
+            width: 100%;
+            height: 100%;
+        }
+        .bancos{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+footer{
+    background-color: $gris;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem ;
+    .redes-sociales{
+        ul{
+            display: flex;
+            flex-direction: column;
+            li a img{
+                width: 1.4rem;
+            }
+        }
+    }
+    .info{
+        width: 33%;
+        color: $blanco;
+        text-align: center;
+    }
+    .nav-footer {
+        ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+    }
+}
+
+.catalogo{
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 3rem;
+        li{
+            background-color: #cacacac7;
+            a{
+                display: block;
+            }
+            img{
+                width: 100%;
+                
+            }
+            p{
+                font-size: 1.3rem;
+                display: inline-block;
+                background-color: $negro;
+                color: $blanco;
+                padding: 0.3rem;
+            }
+        }
+    }
+}
+
+.mapa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .info-mapa{
+        align-self: flex-start;
+        p{
+            margin-bottom: .5rem;
+        }
+    }
+}
+
+.pantalones1{
+    font-size: 20REM;
+    text-align: center;
+}
+@media (min-width:350px){
+    .logo{
+        width: 80%;
+        h1{
+            font-size: 50px;
+        }
+    }
+    .navbar{
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    main{
+        padding: 3rem 2rem;
+    }
+    .imagenes{
+        width: 100%;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .off{
+        grid-row: auto; 
+        grid-column: auto;
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        padding: 1rem;
+    }
+    .info{
+        display: none;
+    }
+
+    .catalogo ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:768px){
+    .navbar{
+        gap: 3rem;
+    }
+    main{
+        padding: 5rem 4rem;
+    }
+    .imagenes{
+        width: 90%;
+    }
+    footer{
+        padding: 2rem;
+    }
+    .info{
+        display: block;
+    }
+
+}
+
+@media (min-width:1024px){
+    .off{
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+        width: 100%;
+    }
+    .catalogo ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1920px){
+    .catalogo ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

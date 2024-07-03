@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+
+}
+
+
+/*
+fuentes
+
+
+font-family: "Bebas Neue", sans-serif;
+
+*/
+ul{
+    padding-left: 0 !important;
+}
+h1{
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    display: inline-block;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+}
+
+
+.carrito{
+    width: 2rem;
+}
+.logo{
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.conteiner-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 4rem;
+    margin-right: 4rem;
+}
+
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+li{
+    display: inline-block;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 4rem;
+    background-color: black;
+    width: 70%;
+    padding: 0.5rem
+    ;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociales ul li a img{
+    width: 1.4rem;
+}
+.redes-sociales ul{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    background-color: #525252;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem ;
+}
+.info{
+    width: 33%;
+    color: white;
+    text-align: center;
+}
+.nav-footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.remeras ul li a{
+    display: block;
+}
+
+.remeras li img{
+    width: 100%;
+    
+}
+
+.remeras li{
+    background-color: #cacacac7;
+
+}
+.remeras ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 3rem;
+}
+.remeras ul li p{
+    font-size: 1.3rem;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 0.3rem;
+}
+main{
+    padding: 10rem 0;
+}
+.mapa{
+    display: flex;
+    justify-content: center;
+}
+.pantalones1{
+    font-size: 20REM;
+    text-align: center;
+}
+.off{
+
+    width: 400px;
+}
+.main-index{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenes{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    width: 70%;
+}
+
+.off{
+    grid-row: 1 / span 2; 
+    grid-column: 1 / span 2;
+    width: 100%;
+}
+.cuotas{
+    width: 100%;
+    height: 100%;
+}
+.bancos{
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width:350px){
+    .logo{
+        width: 80%;
+    }
+    .logo h1{
+        font-size: 50px;
+    }
+    .navbar{
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    main{
+        padding: 3rem 2rem;
+    }
+    .imagenes{
+        width: 100%;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .off{
+        grid-row: auto; 
+        grid-column: auto;
+        width: 100%;
+        height: 100%;
+    }
+    footer{
+        padding: 1rem;
+    }
+    .info{
+        display: none;
+    }
+
+    .remeras ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width:768px){
+    .navbar{
+        gap: 3rem;
+    }
+    main{
+        padding: 5rem 4rem;
+    }
+    .imagenes{
+        width: 90%;
+    }
+    footer{
+        padding: 2rem;
+    }
+    .info{
+        display: block;
+    }
+
+}
+@media (min-width:1024px){
+    .off{
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+        width: 100%;
+    }
+    .remeras ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width:1920px){
+    .remeras ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
